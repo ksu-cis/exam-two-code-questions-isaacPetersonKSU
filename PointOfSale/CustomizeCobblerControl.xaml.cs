@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ExamTwoCodeQuestions.Data;
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Windows;
@@ -21,6 +22,30 @@ namespace ExamTwoQuestions.PointOfSale
         public CustomizeCobblerControl()
         {
             InitializeComponent();
+        }
+
+        private void Blueberry_Checked(object sender, RoutedEventArgs e)
+        {
+            if(DataContext is Cobbler)
+            {
+                ((Cobbler)DataContext).Fruit = FruitFilling.Blueberry;
+            }
+        }
+
+        private void Cherry_Checked(object sender, RoutedEventArgs e)
+        {
+            if (DataContext is Cobbler)
+            {
+                ((Cobbler)DataContext).Fruit = FruitFilling.Cherry;
+            }
+        }
+
+        private void Peach_Checked(object sender, RoutedEventArgs e)
+        {
+            if (DataContext is Cobbler)
+            {
+                ((Cobbler)DataContext).Fruit = FruitFilling.Peach;
+            }
         }
     }
 }

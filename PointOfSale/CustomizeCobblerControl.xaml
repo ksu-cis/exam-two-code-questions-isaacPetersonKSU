@@ -6,7 +6,14 @@
              xmlns:local="clr-namespace:ExamTwoQuestions.PointOfSale"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
-    <Grid>
-        <TextBlock>Customize Cobbler</TextBlock>
-    </Grid>
+    <StackPanel>
+        <Label>Costomize Cobbler</Label>
+        <StackPanel>
+            <RadioButton IsChecked="True" Checked="Blueberry_Checked">Blueberry</RadioButton>
+            <RadioButton Checked="Cherry_Checked">Cherry</RadioButton>
+            <RadioButton Checked="Peach_Checked">Peach</RadioButton>
+        </StackPanel>
+
+        <CheckBox Content="With Ice Cream" IsChecked="{Binding Path=WithIceCream}"/>
+    </StackPanel>
 </UserControl>
