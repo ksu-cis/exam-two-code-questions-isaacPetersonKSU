@@ -6,14 +6,34 @@
              xmlns:local="clr-namespace:ExamTwoQuestions.PointOfSale"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
+    
     <StackPanel>
-        <Label>Costomize Cobbler</Label>
-        <StackPanel>
-            <RadioButton IsChecked="True" Checked="Blueberry_Checked">Blueberry</RadioButton>
-            <RadioButton Checked="Cherry_Checked">Cherry</RadioButton>
-            <RadioButton Checked="Peach_Checked">Peach</RadioButton>
+        <Label Background="LightGray">Costomize Cobbler</Label>
+        <StackPanel Margin="20">
+            <RadioButton IsChecked="True" Checked="Blueberry_Checked">
+                Blueberry
+                <RadioButton.LayoutTransform>
+                    <ScaleTransform ScaleX="2" ScaleY="2"/>
+                </RadioButton.LayoutTransform>
+            </RadioButton>
+            <RadioButton Checked="Cherry_Checked">
+                Cherry
+                <RadioButton.LayoutTransform>
+                    <ScaleTransform ScaleX="2" ScaleY="2"/>
+                </RadioButton.LayoutTransform>
+            </RadioButton>
+            <RadioButton Checked="Peach_Checked">
+                Peach
+                <RadioButton.LayoutTransform>
+                    <ScaleTransform ScaleX="2" ScaleY="2"/>
+                </RadioButton.LayoutTransform>
+            </RadioButton>
         </StackPanel>
 
-        <CheckBox Content="With Ice Cream" IsChecked="{Binding Path=WithIceCream}"/>
+        <CheckBox Margin="20" Content="With Ice Cream" IsChecked="{Binding Path=WithIceCream}">
+            <CheckBox.LayoutTransform>
+                <ScaleTransform ScaleX="2" ScaleY="2"/>
+            </CheckBox.LayoutTransform>
+        </CheckBox>
     </StackPanel>
 </UserControl>
